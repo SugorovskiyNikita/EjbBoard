@@ -2,193 +2,199 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>tsystems-javaschool</groupId>
-  <artifactId>ejbBoard</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>war</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>tsystems-javaschool</groupId>
+    <artifactId>ejbBoard</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
-  <properties>
-    <failOnMissingWebXml>false</failOnMissingWebXml>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <javaee-api.version>8.0</javaee-api.version>
-    <microprofile.version>3.3</microprofile.version>
-    <primefaces.version>8.0</primefaces.version>
-    <omnifaces.version>3.6.1</omnifaces.version>
-    <all-themes.version>1.0.10</all-themes.version>
-    <junit-jupiter.version>5.5.0</junit-jupiter.version>
-    <mockito-core.version>3.1.0</mockito-core.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
-  </properties>
+    <properties>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <javaee-api.version>8.0</javaee-api.version>
+        <microprofile.version>3.3</microprofile.version>
+        <primefaces.version>8.0</primefaces.version>
+        <omnifaces.version>3.6.1</omnifaces.version>
+        <all-themes.version>1.0.10</all-themes.version>
+        <junit-jupiter.version>5.5.0</junit-jupiter.version>
+        <mockito-core.version>3.1.0</mockito-core.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+    </properties>
 
-  <repositories>
-    <repository>
-      <id>prime-repo</id>
-      <name>PrimeFaces Maven Repository</name>
-      <url>http://repository.primefaces.org</url>
-      <layout>default</layout>
-    </repository>
-  </repositories>
+    <repositories>
+        <repository>
+            <id>prime-repo</id>
+            <name>PrimeFaces Maven Repository</name>
+            <url>http://repository.primefaces.org</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
 
-  <dependencies>
-    <dependency>
-      <groupId>javax</groupId>
-      <artifactId>javaee-api</artifactId>
-      <version>${javaee-api.version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.eclipse.microprofile</groupId>
-      <artifactId>microprofile</artifactId>
-      <version>${microprofile.version}</version>
-      <type>pom</type>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.omnifaces</groupId>
-      <artifactId>omnifaces</artifactId>
-      <version>${omnifaces.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.primefaces</groupId>
-      <artifactId>primefaces</artifactId>
-      <version>${primefaces.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.wildfly.plugins</groupId>
-      <artifactId>wildfly-maven-plugin</artifactId>
-      <version>2.0.1.Final</version>
-      <type>maven-plugin</type>
-    </dependency>
-    <dependency>
-      <groupId>org.primefaces.themes</groupId>
-      <artifactId>all-themes</artifactId>
-      <version>${all-themes.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter</artifactId>
-      <version>${junit-jupiter.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-core</artifactId>
-      <version>${mockito-core.version}</version>
-      <scope>test</scope>
-    </dependency>
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>${javaee-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
 
-    <dependency>
-      <groupId>com.sun.jersey</groupId>
-      <artifactId>jersey-client</artifactId>
-      <version>1.8</version>
-    </dependency>
+        <dependency>
+            <groupId>org.eclipse.microprofile</groupId>
+            <artifactId>microprofile</artifactId>
+            <version>${microprofile.version}</version>
+            <type>pom</type>
+            <scope>provided</scope>
+        </dependency>
 
-    <dependency>
-      <groupId>com.sun.jersey</groupId>
-      <artifactId>jersey-json</artifactId>
-      <version>1.8</version>
-    </dependency>
+        <dependency>
+            <groupId>org.omnifaces</groupId>
+            <artifactId>omnifaces</artifactId>
+            <version>${omnifaces.version}</version>
+        </dependency>
 
-  <dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>4.11</version>
-    <scope>test</scope>
-  </dependency>
+        <dependency>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+            <version>${primefaces.version}</version>
+        </dependency>
 
-  <dependency>
-    <groupId>org.projectlombok</groupId>
-    <artifactId>lombok</artifactId>
-    <version>1.18.12</version>
-    <scope>provided</scope>
-  </dependency>
+        <dependency>
+            <groupId>org.wildfly.plugins</groupId>
+            <artifactId>wildfly-maven-plugin</artifactId>
+            <version>2.0.1.Final</version>
+            <type>maven-plugin</type>
+        </dependency>
 
-  <dependency>
-    <groupId>com.sun.facelets</groupId>
-    <artifactId>jsf-facelets</artifactId>
-    <version>1.1.14</version>
-  </dependency>
+        <dependency>
+            <groupId>org.primefaces.themes</groupId>
+            <artifactId>all-themes</artifactId>
+            <version>${all-themes.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit-jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
 
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito-core.version}</version>
+            <scope>test</scope>
+        </dependency>
 
-  <dependency>
-    <groupId>com.sun.faces</groupId>
-    <artifactId>jsf-api</artifactId>
-    <version>2.2.20</version>
-  </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>1.8</version>
+        </dependency>
 
-  <dependency>
-    <groupId>javax.jms</groupId>
-    <artifactId>javax.jms-api</artifactId>
-    <version>2.0.1</version>
-  </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-json</artifactId>
+            <version>1.8</version>
+        </dependency>
 
-  <dependency>
-    <groupId>javax.faces</groupId>
-    <artifactId>javax.faces-api</artifactId>
-    <version>2.1</version>
-    <scope>provided</scope>
-  </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
 
-  </dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>provided</scope>
+        </dependency>
 
-  <build>
-    <finalName>ejbBoard</finalName>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
-      </plugin>
-      <plugin>
-        <groupId>org.wildfly.plugins</groupId>
-        <artifactId>wildfly-maven-plugin</artifactId>
-        <version>2.0.1.Final</version>
-      </plugin>
-      <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.22.2</version>
-      </plugin>
-      <plugin>
-        <artifactId>maven-clean-plugin</artifactId>
-        <version>3.1.0</version>
-      </plugin>
-
-      <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-ear-plugin</artifactId>
-      <version>2.10</version>
-      <configuration>
-        <!-- Tell Maven we are using Java EE 7 -->
-        <version>7</version>
-        <!-- Use Java EE ear libraries as needed. Java EE ear libraries
-            are in easy way to package any libraries needed in the ear, and automatically
-            have any modules (EJB-JARs and WARs) use them -->
-        <defaultLibBundleDir>lib</defaultLibBundleDir>
-        <fileNameMapping>no-version</fileNameMapping>
-      </configuration>
-      </plugin>
+        <dependency>
+            <groupId>com.sun.facelets</groupId>
+            <artifactId>jsf-facelets</artifactId>
+            <version>1.1.14</version>
+        </dependency>
 
 
-      <plugin>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>3.1.0</version>
-      </plugin>
-      <plugin>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>3.2.2</version>
-      </plugin>
-      <plugin>
-        <artifactId>maven-install-plugin</artifactId>
-        <version>2.5.2</version>
-      </plugin>
-      <plugin>
-        <artifactId>maven-deploy-plugin</artifactId>
-        <version>2.8.2</version>
-      </plugin>
-    </plugins>
-  </build>
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-api</artifactId>
+            <version>2.2.20</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.jms</groupId>
+            <artifactId>javax.jms-api</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.faces</groupId>
+            <artifactId>javax.faces-api</artifactId>
+            <version>2.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>ejbBoard</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>2.0.1.Final</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.1.0</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>2.10</version>
+                <configuration>
+                    <!-- Tell Maven we are using Java EE 7 -->
+                    <version>7</version>
+                    <!-- Use Java EE ear libraries as needed. Java EE ear libraries
+                        are in easy way to package any libraries needed in the ear, and automatically
+                        have any modules (EJB-JARs and WARs) use them -->
+                    <defaultLibBundleDir>lib</defaultLibBundleDir>
+                    <fileNameMapping>no-version</fileNameMapping>
+                </configuration>
+            </plugin>
+
+
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.2</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.5.2</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
